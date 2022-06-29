@@ -11,6 +11,10 @@ app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../styles.css'))
 })
 
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.js'))
+})
+
 const port = 4005
 
 app.listen(port, () => console.log(`Server running on port ${port}`))
