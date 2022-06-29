@@ -3,8 +3,12 @@ const path = require('path')
 
 const app = express()
 
-app.get('/', () => {
+app.get('/', (req, res) => {
     resizeBy.sendFile(path.join(__dirname, '../index.html'))
+})
+
+app.get('/css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../styles.css'))
 })
 
 const port = 4005
